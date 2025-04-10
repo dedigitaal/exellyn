@@ -1,37 +1,25 @@
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
-  const isDesktop = window.matchMedia("(min-width: 1025px)").matches;
 
-  if (isDesktop) {
-    // DESKTOP – volg pad
-    gsap.to(".globe", {
-      scrollTrigger: {
-        trigger: ".globe-scroll-pad",
-        start: "top top",
-        end: "+=3000",
-        scrub: true
-      },
-      motionPath: {
-        path: "#globepath",
-        align: "#globepath",
-        autoRotate: false,
-        alignOrigin: [0.5, 0.5]
-      }
-    });
-  } else {
-    // MOBIEL – lineair naar beneden
-    gsap.to(".globe", {
-      scrollTrigger: {
-        trigger: ".globe-scroll-pad",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true
-      },
-      y: 400, // Pas dit aan naar wat visueel goed werkt
-      duration: 1
-    });
-  }
+const isDesktop = window.matchMedia("(min-width: 1025px)").matches;
 
-  // SCHAAL – voor alles
+if (isDesktop) {
+  // Beweging over het pad (vertraagd met end: '+=3000')
+  gsap.to(".globe", {
+    scrollTrigger: {
+      trigger: ".globe-scroll-pad",
+      start: "top top",
+      end: "+=3000",
+      scrub: true
+    },
+    motionPath: {
+      path: "#globepath",
+      align: "#globepath",
+      autoRotate: false,
+      alignOrigin: [0.5, 0.5]
+    }
+  });
+
+  // Schaal-animatie tijdens scroll
   gsap.to(".globe", {
     scrollTrigger: {
       trigger: ".globe-scroll-pad",
@@ -48,3 +36,4 @@ gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
     ],
     duration: 1
   });
+}
