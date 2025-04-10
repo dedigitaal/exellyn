@@ -6,7 +6,7 @@ gsap.to(".globe", {
     trigger: ".globe-scroll-pad",
     start: "top top",
     end: "+=3000", // Lang scrolltraject = langzame beweging
-    scrub: 2       // Zachte landing / easing effect
+    scrub: 20       // Zachte landing / easing effect
   },
   motionPath: {
     path: "#globepath",
