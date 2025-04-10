@@ -5,7 +5,7 @@ gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
     // DESKTOP – volg pad
     gsap.to(".globe", {
       scrollTrigger: {
-        trigger: ".globe-scroll-pad",
+        trigger: ".globe-scroll-lijn",
         start: "top top",
         end: "bottom bottom",
         scrub: true
@@ -22,7 +22,7 @@ gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
     // MOBIEL – lineair naar beneden
     gsap.to(".globe", {
       scrollTrigger: {
-        trigger: ".globe-scroll-pad",
+        trigger: ".globe-scroll-lijn",
         start: "top top",
         end: "bottom bottom",
         scrub: true
@@ -35,7 +35,7 @@ gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
   // SCHAAL – voor alles
   gsap.to(".globe", {
     scrollTrigger: {
-      trigger: ".globe-scroll-pad",
+      trigger: ".globe-scroll-lijn",
       start: "top top",
       end: "bottom bottom",
       scrub: true
