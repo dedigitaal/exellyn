@@ -22,7 +22,7 @@ gsap.to(".globe", {
     trigger: ".globe-scroll-pad",
     start: "top top",
     end: "bottom bottom",
-    scrub: 2
+    scrub: 20
   },
   keyframes: [
     { scale: 1, duration: 0 },
@@ -30,8 +30,7 @@ gsap.to(".globe", {
     { scale: 0.4, duration: 0.25 },
     { scale: 1, duration: 0.35 },
     { scale: 1, duration: 0.15 }
-  ],
-  duration: 1
+  ]
 });
 
 // Bounce-effect voor .globe2 als .empty in beeld komt
