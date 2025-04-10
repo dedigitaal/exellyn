@@ -3,13 +3,13 @@ gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 const isDesktop = window.matchMedia("(min-width: 1025px)").matches;
 
 if (isDesktop) {
-  // Beweging over het pad (vertraagd met end: '+=3000')
+  // Beweeg de globe over het pad met zachte landing
   gsap.to(".globe", {
     scrollTrigger: {
       trigger: ".globe-scroll-pad",
       start: "top top",
-      end: "+=3000",
-      scrub: true
+      end: "+=3000",         // Lang scrolltraject = langzame beweging
+      scrub: 2,              // Zachte landing / easing effect
     },
     motionPath: {
       path: "#globepath",
@@ -19,13 +19,13 @@ if (isDesktop) {
     }
   });
 
-  // Schaal-animatie tijdens scroll
+  // Schaal de globe tijdens scroll
   gsap.to(".globe", {
     scrollTrigger: {
       trigger: ".globe-scroll-pad",
       start: "top top",
       end: "bottom bottom",
-      scrub: true
+      scrub: 2
     },
     keyframes: [
       { scale: 1, duration: 0 },
