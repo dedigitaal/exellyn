@@ -15,8 +15,7 @@ gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
         align: "#globepath",
         autoRotate: false,
         alignOrigin: [0.5, 0.5]
-      },
-      duration: 1
+      }
     });
   } else {
     // MOBIEL – lineair naar beneden
