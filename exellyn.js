@@ -7,7 +7,7 @@ gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
       scrollTrigger: {
         trigger: ".globe-scroll-pad",
         start: "top top",
-        end: "bottom bottom",
+        end: "+=3000",
         scrub: true
       },
       motionPath: {
